@@ -5,10 +5,10 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const socialLinks = [
-    { icon: "fab fa-spotify", url: "#", color: "bg-black hover:bg-gold" },
-    { icon: "fab fa-youtube", url: "#", color: "bg-red-600 hover:bg-gold" },
-    { icon: "fab fa-instagram", url: "#", color: "bg-pink-500 hover:bg-gold" },
-    { icon: "fab fa-facebook", url: "#", color: "bg-blue-600 hover:bg-gold" }
+    { icon: "fab fa-spotify", url: "https://open.spotify.com/artist/4B9AmNqqpYhwoJQQsfe4M3?si=MofaDwRPQ9KBgrZrkAmNFQ", color: "bg-black hover:bg-gold" },
+    { icon: "fab fa-youtube", url: "https://www.youtube.com/@kianbradly17", color: "bg-red-600 hover:bg-gold" },
+    { icon: "fab fa-instagram", url: "https://www.instagram.com/kianbradly/", color: "bg-pink-500 hover:bg-gold" },
+    { icon: "fab fa-facebook", url: "https://www.facebook.com/kianbradly", color: "bg-blue-600 hover:bg-gold" }
   ];
 
   return (
@@ -20,6 +20,8 @@ export default function Navigation() {
             <motion.a
               key={index}
               href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`w-10 h-10 ${link.color} rounded-full flex items-center justify-center text-white transition-all duration-300`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -52,6 +54,8 @@ export default function Navigation() {
                 <motion.a
                   key={index}
                   href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`w-12 h-12 ${link.color} rounded-full flex items-center justify-center text-white transition-all duration-300`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
