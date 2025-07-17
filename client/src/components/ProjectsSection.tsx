@@ -47,7 +47,7 @@ export default function ProjectsSection() {
     },
     {
       title: "Stars In The Sky (Cover)",
-      description: "one of the earliest covers i did, i was still using n-track on this one :)",
+      description: "one of the earliest covers i did, i was still using n-Track on this one :)",
       videoUrl: "https://player.vimeo.com/video/1101474415?autoplay=1"
     }
   ];
