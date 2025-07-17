@@ -70,8 +70,22 @@ export default function ProjectsSection() {
       // Configure for Vimeo iframe embeds
       Video: {
         autoplay: true,
+         },
+    iframe: {
+      css: {
+        backgroundColor: "#000",
+        width: "90vw",
+        height: "90vh",
+        maxWidth: "900px",
+        maxHeight: "506px",
       },
-    });
+      attr: {
+        scrolling: "no",
+        allow: "autoplay; fullscreen; picture-in-picture",
+        allowfullscreen: true,
+      },
+    },
+  });
 
     return () => {
       Fancybox.unbind('[data-fancybox="gallery"]');
