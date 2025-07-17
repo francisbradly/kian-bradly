@@ -74,8 +74,8 @@ export default function ProjectsSection() {
       css: {
         width: "90vw",
         height: "90vh",
-        maxWidth: "900px",
-        maxHeight: "506px",
+        maxWidth: "600px",
+        maxHeight: "600px",
       },
       attr: {
         scrolling: "no",
