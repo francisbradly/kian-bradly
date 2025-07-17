@@ -72,7 +72,6 @@ export default function ProjectsSection() {
     },
     iframe: {
       css: {
-        backgroundColor: "#000",
         width: "90vw",
         height: "90vh",
         maxWidth: "900px",
