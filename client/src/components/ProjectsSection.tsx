@@ -73,7 +73,7 @@ export default function ProjectsSection() {
     iframe: {
       css: {
         width: "90vw",
-        height: "90vh",
+        height: "90vw",
         maxWidth: "600px",
         maxHeight: "600px",
       },
