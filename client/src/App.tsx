@@ -16,29 +16,28 @@ function Router() {
 
 function App() {
   useEffect(() => {
-    const handleContextMenu = (e: MouseEvent) => {
+  const handleContextMenu = (e: MouseEvent) => {
+    e.preventDefault();
+  };
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (
+      e.keyCode === 123 || // F12
+      (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) // Ctrl+Shift+I/J/C
+    ) {
       e.preventDefault();
-    };
+    }
+  };
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      const blockedKeys = [123, 73, 74, 67, 75]; // F12, I, J, C, K
-      if (
-        e.keyCode === 123 || // F12
-        (e.ctrlKey && e.shiftKey && blockedKeys.includes(e.keyCode)) || // Ctrl+Shift+...
-        (e.ctrlKey && [85, 83, 65, 80].includes(e.keyCode)) // Ctrl+U, S, A, P
-      ) {
-        e.preventDefault();
-      }
-    };
+  document.addEventListener("contextmenu", handleContextMenu);
+  document.addEventListener("keydown", handleKeyDown);
 
-    document.addEventListener("contextmenu", handleContextMenu);
-    document.addEventListener("keydown", handleKeyDown);
+  return () => {
+    document.removeEventListener("contextmenu", handleContextMenu);
+    document.removeEventListener("keydown", handleKeyDown);
+  };
+}, []);
 
-    return () => {
-      document.removeEventListener("contextmenu", handleContextMenu);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
 
   return (
     <TooltipProvider>
