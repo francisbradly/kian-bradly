@@ -8,52 +8,52 @@ export default function ProjectsSection() {
     {
       title: "Dahil Sayo (Cover)",
       description: "the first cover song i did when i got my first condenser mic :)",
-      videoUrl: "https://player.vimeo.com/video/1101475158?autoplay=1"
+      videoUrl: "https://player.vimeo.com/video/1101475158?autoplay=1&background=1"
     },
     {
       title: "Hiding In The Blue (Cover)", 
       description: "with Athea—shoutout to her! we recorded this back when we were in Grade 11",
-      videoUrl: "https://player.vimeo.com/video/1101475281?autoplay=1"
+      videoUrl: "https://player.vimeo.com/video/1101475281?autoplay=1&background=1"
     },
     {
       title: "Noche Buena (Cover)",
       description: "made this with my old setup—earphones and a phone",
-      videoUrl: "https://player.vimeo.com/video/1101475025?autoplay=1"
+      videoUrl: "https://player.vimeo.com/video/1101475025?autoplay=1&background=1"
     },
     {
       title: "microtrack 01",
       description: "didn't think of naming these, made them for fun or out of boredom :D",
-      videoUrl: "https://player.vimeo.com/video/1101475254?autoplay=1"
+      videoUrl: "https://player.vimeo.com/video/1101475254?autoplay=1&background=1"
     },
     {
       title: "Microtrack 02",
       description: "was lowkey sick and in school when I made this one lol",
-      videoUrl: "https://player.vimeo.com/video/1101475205?autoplay=1"
+      videoUrl: "https://player.vimeo.com/video/1101475205?autoplay=1&background=1"
     },
     {
       title: "Microtrack 03",
       description: "another one",
-      videoUrl: "https://player.vimeo.com/video/1101475232?autoplay=1"
+      videoUrl: "https://player.vimeo.com/video/1101475232?autoplay=1&background=1"
     },
     {
       title: "Microtrack 04",
       description: "vox by Jonathan—shoutout to you as well!",
-      videoUrl: "https://player.vimeo.com/video/1101475270?autoplay=1"
+      videoUrl: "https://player.vimeo.com/video/1101475270?autoplay=1&background=1"
     },
     {
       title: "Circles (Cover)",
       description: "i remember playing the original song on repeat back then lol, did this with the old setup as well!",
-      videoUrl: "https://player.vimeo.com/video/1101475124?autoplay=1"
+      videoUrl: "https://player.vimeo.com/video/1101475124?autoplay=1&background=1"
     },
     {
       title: "Stars In The Sky (Cover)",
       description: "one of the earliest covers i did, i was still using n-track on this one :)",
-      videoUrl: "https://player.vimeo.com/video/1101474415?autoplay=1"
+      videoUrl: "https://player.vimeo.com/video/1101474415?autoplay=1&background=1"
     }
   ];
 
   // Standalone static image for gallery banner
-  const galleryBannerImage = "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300";
+  const galleryBannerImage = "/gallery-banner-image.jpg";
 
   useEffect(() => {
     Fancybox.bind('[data-fancybox="gallery"]', {
