@@ -55,7 +55,7 @@ export default function ProjectsSection() {
   // Standalone static image for gallery banner
   const galleryBannerImage = "/gallery-banner-image.jpg";
 
-  useEffect(() => {
+ useEffect(() => {
   Fancybox.bind('[data-fancybox="gallery"]', {
     Carousel: {
       infinite: true,
@@ -82,16 +82,6 @@ export default function ProjectsSection() {
         scrolling: "no",
         allow: "autoplay; fullscreen; picture-in-picture",
         allowfullscreen: true,
-      },
-    },
-
-    // force the aspect-ratio class
-    on: {
-      done: (fancybox) => {
-        const iframeWrapper = fancybox?.$container?.querySelector(".fancybox__content");
-        if (iframeWrapper) {
-          iframeWrapper.classList.add("aspect-ratio-1-1");
-        }
       },
     },
   });
