@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   const socialLinks = [
-    { icon: "fab fa-spotify", url: "#" },
-    { icon: "fab fa-youtube", url: "#" },
-    { icon: "fab fa-instagram", url: "#" },
-    { icon: "fab fa-facebook", url: "#" }
+    { icon: "fab fa-spotify", url: "https://open.spotify.com/artist/4B9AmNqqpYhwoJQQsfe4M3?si=MofaDwRPQ9KBgrZrkAmNFQ" },
+    { icon: "fab fa-youtube", url: "https://www.youtube.com/@kianbradly17" },
+    { icon: "fab fa-instagram", url: "https://www.instagram.com/kianbradly/" },
+    { icon: "fab fa-facebook", url: "https://www.facebook.com/kianbradly" }
   ];
 
   return (
@@ -39,7 +39,9 @@ export default function Footer() {
           {socialLinks.map((link, index) => (
             <motion.a 
               key={index}
-              href={link.url} 
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-gold transition-colors"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.95 }}
