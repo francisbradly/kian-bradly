@@ -26,17 +26,17 @@ export default function ProjectsSection() {
       videoUrl: "https://player.vimeo.com/video/1101475254?autoplay=1"
     },
     {
-      title: "Microtrack 02",
+      title: "microtrack 02",
       description: "was lowkey sick and in school when I made this one lol",
       videoUrl: "https://player.vimeo.com/video/1101475205?autoplay=1"
     },
     {
-      title: "Microtrack 03",
+      title: "microtrack 03",
       description: "another one",
       videoUrl: "https://player.vimeo.com/video/1101475232?autoplay=1"
     },
     {
-      title: "Microtrack 04",
+      title: "microtrack 04",
       description: "vox by Jonathan—shoutout to you as well!",
       videoUrl: "https://player.vimeo.com/video/1101475270?autoplay=1"
     },
@@ -132,7 +132,7 @@ export default function ProjectsSection() {
                   <div className="text-center text-white">
                     <i className="fas fa-play-circle text-4xl mb-2"></i>
                     <p className="text-sm font-medium">View Archived Projects</p>
-                    <p className="text-xs opacity-75">5 videos</p>
+                    <p className="text-xs opacity-75">9 videos</p>
                   </div>
                 </div>
               </div>
