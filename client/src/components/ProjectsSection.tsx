@@ -8,27 +8,27 @@ export default function ProjectsSection() {
     {
       title: "Midnight Sessions",
       description: "An experimental ambient track exploring nocturnal soundscapes",
-      videoUrl: "https://player.vimeo.com/video/1101475158?autoplay=1&muted=1"
+      videoUrl: "https://player.vimeo.com/video/1101475158?autoplay=1"
     },
     {
       title: "Cover Series Vol. 1", 
       description: "Acoustic covers of popular hits with a personal twist",
-      videoUrl: "https://vimeo.com/1101475281"
+      videoUrl: "https://player.vimeo.com/video/1101475281?autoplay=1"
     },
     {
       title: "Digital Harmony",
       description: "Electronic fusion exploring the intersection of analog and digital",
-      videoUrl: "https://vimeo.com/1101475025"
+      videoUrl: "https://player.vimeo.com/video/1101475025?autoplay=1"
     },
     {
       title: "Collaboration Track",
       description: "Joint project with local artists blending various genres",
-      videoUrl: "https://vimeo.com/1101475254"
+      videoUrl: "https://player.vimeo.com/video/1101475254?autoplay=1"
     },
     {
       title: "Late Night Vibes",
       description: "Chill beats perfect for studying or relaxing",
-      videoUrl: "https://vimeo.com/1101475205"
+      videoUrl: "https://player.vimeo.com/video/1101475205?autoplay=1"
     }
   ];
 
@@ -50,33 +50,6 @@ export default function ProjectsSection() {
       // Configure for Vimeo iframe embeds
       Video: {
         autoplay: true,
-      },
-      // Properly configure iframe for Vimeo
-      iframe: {
-        preload: false,
-        css: {
-          width: "90vw",
-          height: "90vh",
-          maxWidth: "900px",
-          maxHeight: "506px",
-        },
-        attr: {
-          scrolling: "no",
-          allow: "autoplay; fullscreen; picture-in-picture",
-          allowfullscreen: true,
-        },
-      },
-      // Add custom processing for Vimeo URLs
-      on: {
-        "build": (fancybox, slide) => {
-          if (slide.src && slide.src.includes("player.vimeo.com")) {
-            // Add autoplay parameter for Vimeo
-            const url = new URL(slide.src);
-            url.searchParams.set("autoplay", "1");
-            url.searchParams.set("muted", "0");
-            slide.src = url.toString();
-          }
-        },
       },
     });
 
