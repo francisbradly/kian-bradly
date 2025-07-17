@@ -56,21 +56,20 @@ export default function ProjectsSection() {
   const galleryBannerImage = "/gallery-banner-image.jpg";
 
   useEffect(() => {
-    Fancybox.bind('[data-fancybox="gallery"]', {
-      Carousel: {
-        infinite: true,
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    Carousel: {
+      infinite: true,
+    },
+    Toolbar: {
+      display: {
+        left: ["infobar"],
+        middle: [],
+        right: ["slideshow", "fullscreen", "close"],
       },
-      Toolbar: {
-        display: {
-          left: ["infobar"],
-          middle: [],
-          right: ["slideshow", "fullscreen", "close"],
-        },
-      },
-      // Configure for Vimeo iframe embeds
-      Video: {
-        autoplay: true,
-         },
+    },
+    Video: {
+      autoplay: true,
+    },
     iframe: {
       css: {
         backgroundColor: "#000",
@@ -85,12 +84,22 @@ export default function ProjectsSection() {
         allowfullscreen: true,
       },
     },
+
+    // force the aspect-ratio class
+    on: {
+      done: (fancybox) => {
+        const iframeWrapper = fancybox?.$container?.querySelector(".fancybox__content");
+        if (iframeWrapper) {
+          iframeWrapper.classList.add("aspect-ratio-1-1");
+        }
+      },
+    },
   });
 
-    return () => {
-      Fancybox.unbind('[data-fancybox="gallery"]');
-    };
-  }, []);
+  return () => {
+    Fancybox.unbind('[data-fancybox="gallery"]');
+  };
+}, []);
 
   return (
     <section id="projects" className="min-h-screen bg-white py-20 px-6">
