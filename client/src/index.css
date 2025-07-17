@@ -205,12 +205,3 @@
   z-index: 99999 !important;
   background: white !important;
 }
-
-/* FORCE BLACK BACKGROUND ON ALL FANCYBOX LAYERS */
-.fancybox__container,
-.fancybox__slide,
-.fancybox__content,
-.fancybox__iframe,
-.fancybox__iframe iframe {
-  background-color: #000 !important;
-}
