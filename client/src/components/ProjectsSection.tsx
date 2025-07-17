@@ -8,7 +8,7 @@ export default function ProjectsSection() {
     {
       title: "Midnight Sessions",
       description: "An experimental ambient track exploring nocturnal soundscapes",
-      videoUrl: "https://vimeo.com/1101475158"
+      videoUrl: "https://player.vimeo.com/video/1101475158?autoplay=1&muted=1"
     },
     {
       title: "Cover Series Vol. 1", 
