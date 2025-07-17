@@ -51,6 +51,33 @@ export default function ProjectsSection() {
       Video: {
         autoplay: true,
       },
+      // Properly configure iframe for Vimeo
+      iframe: {
+        preload: false,
+        css: {
+          width: "90vw",
+          height: "90vh",
+          maxWidth: "900px",
+          maxHeight: "506px",
+        },
+        attr: {
+          scrolling: "no",
+          allow: "autoplay; fullscreen; picture-in-picture",
+          allowfullscreen: true,
+        },
+      },
+      // Add custom processing for Vimeo URLs
+      on: {
+        "build": (fancybox, slide) => {
+          if (slide.src && slide.src.includes("player.vimeo.com")) {
+            // Add autoplay parameter for Vimeo
+            const url = new URL(slide.src);
+            url.searchParams.set("autoplay", "1");
+            url.searchParams.set("muted", "0");
+            slide.src = url.toString();
+          }
+        },
+      },
     });
 
     return () => {
@@ -95,7 +122,7 @@ export default function ProjectsSection() {
             <a 
               href={projects[0].videoUrl}
               data-fancybox="gallery"
-              data-type="video"
+              data-type="iframe"
               data-caption={`<div class="text-center">
                 <h3 class="text-xl font-semibold mb-2">${projects[0].title}</h3>
                 <p class="text-gray-600">${projects[0].description}</p>
@@ -124,7 +151,7 @@ export default function ProjectsSection() {
                 key={index + 1}
                 href={project.videoUrl}
                 data-fancybox="gallery"
-                data-type="video"
+                data-type="iframe"
                 data-caption={`<div class="text-center">
                   <h3 class="text-xl font-semibold mb-2">${project.title}</h3>
                   <p class="text-gray-600">${project.description}</p>
