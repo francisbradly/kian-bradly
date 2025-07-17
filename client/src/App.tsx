@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -15,30 +14,6 @@ function Router() {
 }
 
 function App() {
-  useEffect(() => {
-  const handleContextMenu = (e: MouseEvent) => {
-    e.preventDefault();
-  };
-
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (
-      e.keyCode === 123 || // F12
-      (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) // Ctrl+Shift+I/J/C
-    ) {
-      e.preventDefault();
-    }
-  };
-
-  document.addEventListener("contextmenu", handleContextMenu);
-  document.addEventListener("keydown", handleKeyDown);
-
-  return () => {
-    document.removeEventListener("contextmenu", handleContextMenu);
-    document.removeEventListener("keydown", handleKeyDown);
-  };
-}, []);
-
-
   return (
     <TooltipProvider>
       <BrowserDetector />
